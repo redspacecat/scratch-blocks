@@ -100,6 +100,20 @@ Blockly.Blocks['motion_turnleft'] = {
   }
 };
 
+Blockly.Blocks['motion_turnaround'] = {
+  /**
+   * Block to turn around.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.MOTION_TURNAROUND,
+      "category": Blockly.Categories.motion,
+      "extensions": ["colours_motion", "shape_statement"]
+    });
+  }
+};
+
 Blockly.Blocks['motion_pointindirection'] = {
   /**
    * Block to point in direction.
@@ -474,6 +488,21 @@ Blockly.Blocks['motion_direction'] = {
   init: function() {
     this.jsonInit({
       "message0": Blockly.Msg.MOTION_DIRECTION,
+      "category": Blockly.Categories.motion,
+      "checkboxInFlyout": true,
+      "extensions": ["colours_motion", "output_number"]
+    });
+  }
+};
+
+Blockly.Blocks['motion_rotationstyle'] = {
+  /**
+   * Block to report rotation style.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.MOTION_ROTATIONSTYLE,
       "category": Blockly.Categories.motion,
       "checkboxInFlyout": true,
       "extensions": ["colours_motion", "output_number"]

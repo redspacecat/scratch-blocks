@@ -506,6 +506,37 @@ Blockly.Blocks['looks_goforwardbackwardlayers'] = {
   }
 };
 
+Blockly.Blocks['looks_lookseffect'] = {
+  /**
+   * Block to report backdrop's number or name
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.LOOKS_LOOKSEFFECT,
+      "args0": [
+        {
+          "type": "field_dropdown",
+          "name": "EFFECT",
+          "options": [
+            [Blockly.Msg.LOOKS_EFFECT_COLOR, 'color'],
+            [Blockly.Msg.LOOKS_EFFECT_FISHEYE, 'fisheye'],
+            [Blockly.Msg.LOOKS_EFFECT_WHIRL, 'whirl'],
+            [Blockly.Msg.LOOKS_EFFECT_PIXELATE, 'pixelate'],
+            [Blockly.Msg.LOOKS_EFFECT_MOSAIC, 'mosaic'],
+            [Blockly.Msg.LOOKS_EFFECT_BRIGHTNESS, 'brightness'],
+            [Blockly.Msg.LOOKS_EFFECT_GHOST, 'ghost'],
+          ]
+        }
+      ],
+      "category": Blockly.Categories.looks,
+      "checkboxInFlyout": true,
+      "extensions": ["colours_looks", "output_number"]
+    });
+  }
+};
+
+
 Blockly.Blocks['looks_backdropnumbername'] = {
   /**
    * Block to report backdrop's number or name
@@ -546,6 +577,31 @@ Blockly.Blocks['looks_costumenumbername'] = {
           "options": [
             [Blockly.Msg.LOOKS_NUMBERNAME_NUMBER, 'number'],
             [Blockly.Msg.LOOKS_NUMBERNAME_NAME, 'name']
+          ]
+        }
+      ],
+      "category": Blockly.Categories.looks,
+      "checkboxInFlyout": true,
+      "extensions": ["colours_looks", "output_number"]
+    });
+  }
+};
+
+Blockly.Blocks['looks_costumewidthheight'] = {
+  /**
+   * Block to report costume's width or height
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.LOOKS_COSTUMEWIDTHHEIGHT,
+      "args0": [
+        {
+          "type": "field_dropdown",
+          "name": "WIDTH_HEIGHT",
+          "options": [
+            [Blockly.Msg.LOOKS_COSTUMEWIDTH, 'width'],
+            [Blockly.Msg.LOOKS_COSTUMEHEIGHT, 'height']
           ]
         }
       ],
