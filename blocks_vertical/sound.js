@@ -105,6 +105,26 @@ Blockly.Blocks['sound_playuntildone'] = {
   }
 };
 
+Blockly.Blocks['sound_length'] = {
+  /**
+   * Block to get the length of a sound.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.SOUND_LENGTH,
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "SOUND_MENU"
+        }
+      ],
+      "category": Blockly.Categories.sound,
+      "extensions": ["colours_sounds", "output_number"]
+    });
+  }
+};
+
 Blockly.Blocks['sound_stopallsounds'] = {
   /**
    * Block to stop all sounds
@@ -172,6 +192,31 @@ Blockly.Blocks['sound_changeeffectby'] = {
       ],
       "category": Blockly.Categories.sound,
       "extensions": ["colours_sounds", "shape_statement"]
+    });
+  }
+};
+
+Blockly.Blocks['sound_soundeffect'] = {
+  /**
+   * Block to report current sound effect
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.SOUND_SOUNDEFFECT,
+      "args0": [
+        {
+          "type": "field_dropdown",
+          "name": "EFFECT",
+          "options": [
+            [Blockly.Msg.SOUND_EFFECTS_PITCH, 'pitch'],
+            [Blockly.Msg.SOUND_EFFECTS_PAN, 'pan left/right'],
+          ]
+        }
+      ],
+      "category": Blockly.Categories.sound,
+      "checkboxInFlyout": true,
+      "extensions": ["colours_sounds", "output_number"]
     });
   }
 };

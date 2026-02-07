@@ -144,6 +144,20 @@ Blockly.Blocks['looks_hide'] = {
   }
 };
 
+Blockly.Blocks['looks_visible'] = {
+  /**
+   * Detects if the sprite is visible.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.LOOKS_VISIBLE,
+      "category": Blockly.Categories.looks,
+      "extensions": ["colours_looks", "output_boolean"]
+    });
+  }
+};
+
 Blockly.Blocks['looks_hideallsprites'] = {
   /**
    * Hide-all-sprites block. Does not actually do anything. This is an
