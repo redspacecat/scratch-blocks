@@ -284,6 +284,21 @@ Blockly.Blocks['sensing_mousedown'] = {
     this.jsonInit({
       "message0": Blockly.Msg.SENSING_MOUSEDOWN,
       "category": Blockly.Categories.sensing,
+      "extensions": ["colours_sensing", "output_boolean"],
+      "checkboxInFlyout": true
+    });
+  }
+};
+
+Blockly.Blocks['sensing_draggable'] = {
+  /**
+   * Block to Report if the mouse is down.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.SENSING_DRAGGABLE,
+      "category": Blockly.Categories.sensing,
       "extensions": ["colours_sensing", "output_boolean"]
     });
   }
@@ -298,7 +313,8 @@ Blockly.Blocks['sensing_mousex'] = {
     this.jsonInit({
       "message0": Blockly.Msg.SENSING_MOUSEX,
       "category": Blockly.Categories.sensing,
-      "extensions": ["colours_sensing", "output_number"]
+      "extensions": ["colours_sensing", "output_number"],
+      "checkboxInFlyout": true
     });
   }
 };
@@ -312,7 +328,8 @@ Blockly.Blocks['sensing_mousey'] = {
     this.jsonInit({
       "message0": Blockly.Msg.SENSING_MOUSEY,
       "category": Blockly.Categories.sensing,
-      "extensions": ["colours_sensing", "output_number"]
+      "extensions": ["colours_sensing", "output_number"],
+      "checkboxInFlyout": true
     });
   }
 };

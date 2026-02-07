@@ -248,6 +248,7 @@ Blockly.Msg.SENSING_ASK_TEXT = 'What\'s your name?';
 Blockly.Msg.SENSING_ANSWER = 'answer';
 Blockly.Msg.SENSING_KEYPRESSED = 'key %1 pressed?';
 Blockly.Msg.SENSING_MOUSEDOWN = 'mouse down?';
+Blockly.Msg.SENSING_DRAGGABLE = 'draggable?';
 Blockly.Msg.SENSING_MOUSEX = 'mouse x';
 Blockly.Msg.SENSING_MOUSEY = 'mouse y';
 Blockly.Msg.SENSING_SETDRAGMODE = 'set drag mode %1';
